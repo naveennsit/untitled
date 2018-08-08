@@ -23,3 +23,10 @@
     <button mat-raised-button color="primary" [disabled]="!canBeClosed" (click)="closeDialog()">{{primaryButtonText}}</button>
   </mat-dialog-actions>
 </div>
+
+
+
+<input type="file" (change)="upload($event.target.files)" />
+Upload Percent: {{percentDone}}% <br />
+
+<mat-progress-bar *ngIf="progress" mode="determinate" [value]="progress[file.name].progress | async"></mat-progress-bar>

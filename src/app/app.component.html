@@ -1,1 +1,5 @@
-<app-upload></app-upload>
+<!--<app-upload></app-upload>-->
+<input type="file" (change)="onFileSelected($event)">
+<mat-progress-bar *ngIf="showProgressBar" mode="determinate" [value]="progress"></mat-progress-bar>
+
+<button (click)="uploadImage()">Upload</button>
